@@ -1,0 +1,90 @@
+@startuml MCD_Bibliotheque
+allowmixing
+hide circle
+hide empty members
+
+!theme plain
+
+skinparam defaultFontName Arial
+skinparam defaultFontColor black
+skinparam backgroundColor white
+
+skinparam entity {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  HeaderBackgroundColor white
+  StereotypeFontColor white
+}
+
+skinparam rectangle {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+}
+
+skinparam class {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  HeaderBackgroundColor white
+}
+
+skinparam ArrowColor black
+skinparam ArrowFontColor black
+skinparam ArrowThickness 1
+
+entity "LIVRE" {
+  isbn
+  titre
+  auteur
+  categorie
+  nb_exemplaires
+}
+
+entity "ADHERENT" {
+  num_adherent
+  nom
+  prenom
+  filiere
+  niveau
+  email
+  date_inscription
+}
+
+entity "EXEMPLAIRE" {
+  id_exemplaire
+  etat
+}
+
+entity "EMPRUNT" {
+  id_emprunt
+  date_emprunt
+  date_retour_prevue
+  date_retour_reelle
+}
+
+entity "AMENDE" {
+  id_amende
+  montant
+  statut_paiement
+}
+
+rectangle "POSSEDER" as POSSEDER
+rectangle "EFFECTUER" as EFFECTUER
+rectangle "CONCERNER" as CONCERNER
+rectangle "GENERER" as GENERER
+
+LIVRE      "1,1" -[#black]- POSSEDER
+POSSEDER   "1,n" -[#black]- EXEMPLAIRE
+
+ADHERENT   "0,n" -[#black]- EFFECTUER
+EFFECTUER  "1,1" -[#black]- EMPRUNT
+
+EXEMPLAIRE "0,n" -[#black]- CONCERNER
+CONCERNER  "1,1" -[#black]- EMPRUNT
+
+EMPRUNT    "0,1" -[#black]- GENERER
+GENERER    "1,1" -[#black]- AMENDE
+
+@enduml
