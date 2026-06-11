@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fond vert foncé, assorti à la Navbar du site -->
+  <rect width="64" height="64" rx="14" fill="#1a3d2b"/>
+  <!-- Livre ouvert -->
+  <path d="M32 17.5c-4.8-3.6-11.5-4.6-17.5-3.6v31c6-1 12.7 0 17.5 3.6 4.8-3.6 11.5-4.6 17.5-3.6v-31c-6-1-12.7 0-17.5 3.6z" fill="#f5f0e6"/>
+  <!-- Pli central -->
+  <path d="M32 17.5v31" stroke="#1a3d2b" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Lignes de texte page gauche -->
+  <path d="M19.5 23.5c3.2-.5 6.4-.2 9 1M19.5 29c3.2-.5 6.4-.2 9 1M19.5 34.5c3.2-.5 6.4-.2 9 1" stroke="#1a3d2b" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <!-- Lignes de texte page droite -->
+  <path d="M44.5 23.5c-3.2-.5-6.4-.2-9 1M44.5 29c-3.2-.5-6.4-.2-9 1M44.5 34.5c-3.2-.5-6.4-.2-9 1" stroke="#1a3d2b" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <!-- Marque-page doré -->
+  <path d="M39 14.5v9l3-2.2 3 2.2v-10c-2-.1-4 .2-6 1z" fill="#c9a227"/>
+</svg>

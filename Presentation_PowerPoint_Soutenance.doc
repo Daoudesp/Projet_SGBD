@@ -1,0 +1,351 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<meta charset="utf-8">
+<title>Présentation PowerPoint — Contenu complet</title>
+<style>
+body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #1d1d1d; }
+h1 { font-size: 20pt; color: #1a3d2b; }
+h2 { font-size: 15pt; color: #1a3d2b; border-bottom: 2pt solid #1a3d2b; padding-bottom: 4pt; margin-top: 22pt; }
+h3 { font-size: 12.5pt; color: #2d5a3d; margin-top: 14pt; }
+table { border-collapse: collapse; width: 100%; margin: 8pt 0; }
+th { background: #e3ede7; border: 1pt solid #9bb3a5; padding: 5pt 7pt; text-align: left; font-size: 10pt; }
+td { border: 1pt solid #b9c9bf; padding: 5pt 7pt; font-size: 10pt; vertical-align: top; }
+pre { background: #f4f4f4; border: 1pt solid #d8d8d8; padding: 7pt; font-family: Consolas, monospace; font-size: 9pt; }
+.notes { background: #f3f7f4; border-left: 4pt solid #1a3d2b; padding: 7pt 11pt; font-size: 10pt; }
+.slide { border: 1.5pt solid #1a3d2b; padding: 10pt 14pt; margin: 14pt 0; }
+.slidehead { background: #1a3d2b; color: #ffffff; padding: 5pt 10pt; font-weight: bold; font-size: 12pt; }
+.q { font-weight: bold; color: #1a3d2b; }
+.qr { margin-bottom: 8pt; }
+.pagebreak { page-break-before: always; }
+.gold { color: #b8901f; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Présentation PowerPoint de Soutenance — Contenu complet prêt à monter</h1>
+<p><b>Sujet 1 : Gestion d'une Bibliothèque Universitaire</b> — L2 GLSI, ESP, 2025–2026<br>
+Rahmatoulaye DIOUF (Base de données + droits) · Oumar GAYE (Backend Flask) · Daouda CISSE (Frontend React + rapport)<br>
+15 diapositives · 5 minutes maximum par étudiant</p>
+
+<h2>Charte graphique globale (à appliquer à toutes les slides)</h2>
+<table>
+<tr><th>Élément</th><th>Recommandation</th></tr>
+<tr><td>Palette de couleurs</td><td><b>Vert foncé #1A3D2B</b> (fonds de titres, bandeaux) · <b>Vert moyen #2D5A3D</b> (accents) · <b>Doré #C9A227</b> (chiffres clés, surlignages) · <b>Crème #F5F0E6</b> (fonds de slides) · Blanc (cartes). C'est exactement la palette de l'application : cohérence totale entre les slides et la démo.</td></tr>
+<tr><td>Polices</td><td>Titres : <b>Playfair Display</b> (ou Georgia si non installée) — la police des titres du site. Corps : <b>Calibri ou Inter</b>, jamais sous 18 pt.</td></tr>
+<tr><td>Règle de texte</td><td>Maximum 5 puces par slide, 8 mots par puce. Tout le reste passe dans les notes du présentateur.</td></tr>
+<tr><td>Icônes</td><td>Utiliser les icônes intégrées de PowerPoint (Insertion → Icônes) : livre, base de données, serveur, écran, bouclier, engrenage. Une couleur unique : vert foncé ou doré.</td></tr>
+<tr><td>Encadrés visuels</td><td>Pour chaque chiffre clé : carte blanche, ombre légère, gros chiffre en doré 40 pt, libellé en dessous (reproduire les « stat cards » du tableau de bord du site).</td></tr>
+<tr><td>Pied de page</td><td>« Bibliothèque ESP — L2 GLSI 2026 » + numéro de slide, en vert clair discret.</td></tr>
+</table>
+
+<!-- ================= SLIDE 1 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 1 — Page de garde (porte-parole, 20 s)</div>
+<p><b>Titre :</b> Gestion d'une Bibliothèque Universitaire<br>
+<b>Sous-titre :</b> Application web complète — MySQL · Flask · React<br>
+<b>Texte :</b> Daouda CISSE · Rahmatoulaye DIOUF · Oumar GAYE — L2 GLSI · ESP · Année académique 2025–2026 — Encadré par Pr. Samba DIAW &amp; M. Amadou MBAYE</p>
+<p><b>Mise en page :</b> fond vert foncé #1A3D2B plein écran ; titre en blanc Playfair Display 44 pt centré ; un trait doré horizontal sous le titre ; les 3 noms dans 3 cartes blanches arrondies alignées en bas.</p>
+<p><b>Icônes :</b> grande icône « livre ouvert » dorée au-dessus du titre (reprendre le favicon du site : livre ouvert + marque-page doré — fichier frontend/public/favicon.svg, exportable en PNG).</p>
+<p><b>Illustration de couverture :</b> en filigrane discret (10 % d'opacité), la capture du tableau de bord de l'application.</p>
+<div class="notes"><b>Notes présentateur :</b> Saluer le jury, annoncer le sujet et la répartition : « Rahmatoulaye présentera la base de données et la gestion des droits, Oumar le backend Flask, et Daouda l'interface React et le rapport. »</div>
+</div>
+
+<!-- ================= SLIDE 2 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 2 — Contexte &amp; objectifs (porte-parole, 40 s)</div>
+<p><b>Titre :</b> Du registre papier à l'application web</p>
+<p><b>Contenu (2 colonnes) :</b></p>
+<table>
+<tr><th>AVANT — le problème</th><th>APRÈS — notre solution</th></tr>
+<tr><td>Registre papier · retards mal suivis · amendes calculées à la main · règles appliquées « de tête »</td><td>Application web 3-tiers · règles automatisées par la base · amende 100 FCFA/jour calculée automatiquement · tableau de bord en temps réel</td></tr>
+</table>
+<p><b>SmartArt recommandé :</b> « Processus en flèche » à 2 blocs (Avant → Après), bloc gauche gris, bloc droit vert ; ou SmartArt « Équilibre ».</p>
+<p><b>Icônes :</b> 📒 cahier barré (avant) → 💻 écran + ✅ coche (après). Icônes PowerPoint : « book », « laptop », « checkmark ».</p>
+<p><b>Encadré visuel :</b> bandeau doré en bas : « 6 fonctionnalités demandées par le sujet — toutes implémentées ».</p>
+<div class="notes"><b>Notes présentateur :</b> « La bibliothèque du département gère ses emprunts sur papier : retards mal suivis, amendes calculées à la main. Notre objectif : un système complet où les règles du sujet — 3 emprunts maximum, exemplaire abîmé interdit, blocage des adhérents avec amende, amende automatique de 100 FCFA par jour — sont appliquées automatiquement, sans intervention humaine. »</div>
+</div>
+
+<!-- ================= SLIDE 3 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 3 — Architecture générale (porte-parole, 40 s)</div>
+<p><b>Titre :</b> Une architecture 3-tiers</p>
+<p><b>Schéma à créer (SmartArt « Processus vertical » ou formes + flèches) :</b></p>
+<pre>   👤 UTILISATEUR (bibliothécaire)
+        ↓ navigateur
+   🖥️ FRONTEND — React (port 3000)        ← carte blanche, logo React
+        ↓ axios · JSON
+   ⚙️ BACKEND — Flask API (port 5000)      ← carte blanche, logo Flask/Python
+        ↓ requêtes préparées
+   🗄️ BASE DE DONNÉES — MySQL (biblio_dept) ← carte verte, logo MySQL
+      5 tables · 4 triggers · 3 vues</pre>
+<p><b>Conseils visuels :</b> trois grandes cartes empilées reliées par des flèches épaisses vertes ; sur chaque flèche, étiqueter le protocole (HTTP/JSON, SQL préparé). À droite du schéma, un encadré doré : « Les règles métier vivent dans MySQL — impossible de les contourner ».</p>
+<p><b>Icônes :</b> logos officiels React, Flask, MySQL (petits, dans les cartes) + icône utilisateur.</p>
+<div class="notes"><b>Notes présentateur :</b> « Trois couches indépendantes qui communiquent : React affiche, Flask transporte, MySQL décide. Le choix fort de notre architecture : les règles de gestion sont implémentées dans la base par des triggers — l'application ne peut pas les contourner. Chaque membre du groupe a développé une couche. »</div>
+</div>
+
+<!-- ================= SLIDE 4 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 4 — Modélisation Merise · <i>Présentée par Rahmatoulaye DIOUF</i></div>
+<p><b>Titre :</b> Du MCD au MLD</p>
+<p><b>Contenu :</b></p>
+<ul>
+<li>5 entités : Livre · Exemplaire · Adhérent · Emprunt · Amende</li>
+<li>Choix clé : <b>Livre (l'œuvre) ≠ Exemplaire (la copie physique empruntée)</b></li>
+<li>1 emprunt = 1 adhérent + 1 exemplaire · 1 emprunt → au plus 1 amende</li>
+</ul>
+<p><b>Visuel principal : insérer MCD.png</b> (déjà dans le dossier du projet), recadré, occupant 60 % de la slide à droite.</p>
+<p><b>En dessous, le MLD en une ligne (police monospace) :</b></p>
+<pre>Livre(isbn) ── Exemplaire(id, #isbn) ── Emprunt(id, #num_adherent, #id_exemplaire) ── Amende(id, #id_emprunt UNIQUE)
+Adherent(num_adherent)</pre>
+<p><b>Icônes :</b> 📐 équerre/diagramme (Merise). <b>Encadré doré :</b> « Clés étrangères = migration des cardinalités (1,1) ».</p>
+<div class="notes"><b>Notes présentateur (Rahmatoulaye) :</b> Expliquer la distinction Livre/Exemplaire (la bibliothèque a 3 copies du même livre, c'est la copie qu'on emprunte et qui a un état). Montrer sur le MCD les cardinalités, puis dire que le MLD en découle par les règles de passage : l'ISBN migre dans Exemplaire, l'adhérent et l'exemplaire migrent dans Emprunt, l'emprunt migre dans Amende avec UNIQUE car une seule amende par emprunt.</div>
+</div>
+
+<!-- ================= SLIDE 5 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 5 — La base MySQL : contraintes &amp; triggers · <i>Rahmatoulaye DIOUF</i></div>
+<p><b>Titre :</b> Une base qui applique elle-même les règles</p>
+<p><b>Contenu (gauche — chiffres clés en 4 cartes) :</b> <span class="gold">5</span> tables · <span class="gold">4</span> triggers · <span class="gold">3</span> vues · <span class="gold">4</span> index</p>
+<p><b>Contenu (droite — SmartArt « Liste verticale d'images ») — les 4 triggers :</b></p>
+<ul>
+<li>🛡️ <b>AVANT emprunt</b> : exemplaire ni abîmé ni emprunté · max 3 emprunts actifs · aucune amende impayée · date retour = J+14</li>
+<li>🔄 <b>APRÈS emprunt</b> : exemplaire → « emprunté »</li>
+<li>💰 <b>AU retour</b> : retard ? → amende = jours × 100 FCFA (automatique)</li>
+<li>✅ <b>APRÈS retour</b> : exemplaire → « disponible »</li>
+</ul>
+<p><b>Encadré code (petit, en bas) :</b> <code>SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Adhérent bloqué : amendes impayées.';</code></p>
+<p><b>Contraintes (bandeau bas, 1 ligne) :</b> PK · FK · NOT NULL · UNIQUE(email) · CHECK(montant&gt;0) · ENUM · DEFAULT · CASCADE/RESTRICT</p>
+<p><b>Icônes :</b> 🗄️ base de données, 🛡️ bouclier (triggers), ⚡ éclair (automatique).</p>
+<div class="notes"><b>Notes présentateur (Rahmatoulaye) :</b> Insister : « les 4 règles de gestion du sujet sont toutes dans les triggers, pas dans le code applicatif ». Expliquer SIGNAL : le trigger annule l'opération et renvoie un message métier qui remontera jusqu'à l'écran. Mentionner CASCADE (Livre→Exemplaire) vs RESTRICT (protéger l'historique des emprunts). Données de test conformes : 10 livres, 15 adhérents, 20 exemplaires, 15 emprunts dont 5 en retard → 5 amendes générées automatiquement.</div>
+</div>
+
+<!-- ================= SLIDE 6 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 6 — Requêtes SQL &amp; gestion des droits (LCD) · <i>Rahmatoulaye DIOUF</i></div>
+<p><b>Titre :</b> Interroger et protéger la base</p>
+<p><b>Contenu (gauche — les 6 requêtes du sujet, liste compacte) :</b> exemplaires disponibles (JOIN) · emprunts actifs par adhérent (LEFT JOIN + HAVING) · amendes impayées (sous-requête IN) · top 3 livres (GROUP BY + LIMIT) · jamais emprunté (NOT EXISTS) · amendes par filière (SUM + CASE WHEN)</p>
+<p><b>Contenu (droite — SmartArt « Comparaison » 2 cartes) :</b></p>
+<table>
+<tr><th>👩‍💼 bibliothecaire</th><th>👁️ lecteur</th></tr>
+<tr><td>SELECT · INSERT · UPDATE sur toute la base<br><b>jamais DELETE</b><br>→ compte utilisé par l'application</td><td>SELECT uniquement<br>sur Livre et Exemplaire<br>→ consultation du catalogue</td></tr>
+</table>
+<p><b>Encadré doré :</b> « Principe du moindre privilège : l'application ne se connecte pas en root ».</p>
+<p><b>Capture d'écran à insérer :</b> le terminal MySQL montrant <code>SELECT ... FROM Adherent</code> → <code>ERROR: command denied to user 'lecteur'</code> (la preuve que les GRANT fonctionnent).</p>
+<p><b>Icônes :</b> 🔑 clé (GRANT), 🚫 interdit (REVOKE/refus), 🔍 loupe (requêtes).</p>
+<div class="notes"><b>Notes présentateur (Rahmatoulaye) :</b> Citer une ou deux techniques SQL (NOT EXISTS, CASE WHEN dans SUM) sans lire la liste. Terminer sur la capture : « avec le compte lecteur, MySQL refuse lui-même l'accès à la table Adherent — la sécurité ne dépend pas de l'application ». Transition : « Oumar va vous montrer comment l'application exploite cette base. »</div>
+</div>
+
+<!-- ================= SLIDE 7 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 7 — Architecture Flask · <i>Présentée par Oumar GAYE</i></div>
+<p><b>Titre :</b> Un backend API REST, organisé par modules</p>
+<p><b>Visuel principal — arborescence stylisée (formes, pas de texte brut) :</b></p>
+<pre>app.py (point d'entrée + CORS)
+├── config.py    → connexion MySQL (compte bibliothecaire)
+├── database.py  → execute_query() : requêtes préparées
+└── routes/ — 5 Blueprints : adherents · livres · emprunts · amendes · dashboard</pre>
+<p><b>Conseil visuel :</b> représenter chaque fichier par une carte ; les 5 blueprints en 5 pastilles vertes alignées — et préciser qu'elles correspondent exactement aux 5 dossiers de composants React (symétrie à rappeler en slide 10).</p>
+<p><b>Encadré doré :</b> « API REST : pas de HTML — uniquement du JSON + codes HTTP ».</p>
+<p><b>Icônes :</b> ⚙️ engrenage (serveur), 🧩 puzzle (blueprints), 🔁 flèches (REST).</p>
+<div class="notes"><b>Notes présentateur (Oumar) :</b> « Le backend ne produit aucune page : il reçoit des requêtes HTTP et répond en JSON. app.py enregistre cinq Blueprints — un par domaine métier, ce qui nous a permis de travailler sans conflit. CORS est activé car React est sur le port 3000 et Flask sur le 5000. La connexion MySQL utilise le compte bibliothecaire créé par Rahmatoulaye. »</div>
+</div>
+
+<!-- ================= SLIDE 8 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 8 — L'API en action : 16 endpoints · <i>Oumar GAYE</i></div>
+<p><b>Titre :</b> 16 endpoints pour 6 fonctionnalités</p>
+<p><b>Visuel principal — schéma de séquence simplifié (SmartArt « Processus » horizontal) du cas le plus parlant, l'emprunt :</b></p>
+<pre>React : POST /api/emprunts → Flask : INSERT préparé → Trigger MySQL : vérifie les 3 règles
+   ✅ accepté → 201 « Emprunt enregistré »          ❌ refusé → 422 « Adhérent bloqué : amendes impayées »</pre>
+<p><b>Contenu (bandeau bas — tableau ultra-compact) :</b> Adhérents : 5 routes (CRUD + recherche/filtre) · Livres &amp; exemplaires : 4 · Emprunts &amp; retours : 4 · Amendes : 2 · Dashboard : 1</p>
+<p><b>Encadré doré :</b> « Le backend ne calcule pas les règles : il transmet la décision de la base ».</p>
+<p><b>Icônes :</b> 📋 liste (endpoints), ↔️ flèches (requête/réponse), 🎯 cible (codes HTTP).</p>
+<div class="notes"><b>Notes présentateur (Oumar) :</b> Dérouler le schéma de l'emprunt : « mon code fait un simple INSERT ; le trigger décide ; si refus, j'intercepte l'exception et je renvoie le message métier avec le code 422 — le frontend l'affichera tel quel ». Même logique au retour : UPDATE, le trigger crée l'amende, je relis la table Amende pour annoncer le montant. Citer les codes : 201 création, 400 données manquantes, 404 introuvable, 422 refus métier.</div>
+</div>
+
+<!-- ================= SLIDE 9 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 9 — Sécurité &amp; validation · <i>Oumar GAYE</i></div>
+<p><b>Titre :</b> Trois lignes de défense</p>
+<p><b>Visuel principal — SmartArt « Pyramide » ou 3 boucliers empilés :</b></p>
+<ul>
+<li>1️⃣ <b>Frontend</b> — champs obligatoires, listes déroulantes fermées</li>
+<li>2️⃣ <b>Backend</b> — données vérifiées (400 si manquantes) + <b>requêtes préparées</b> = injection SQL impossible</li>
+<li>3️⃣ <b>MySQL</b> — contraintes + triggers + <b>privilèges limités</b> (pas de DELETE/DROP)</li>
+</ul>
+<p><b>Encadré code (comparatif 2 colonnes, rouge/vert) :</b></p>
+<pre>❌ f"WHERE nom LIKE '{saisie}'"   →  injection possible
+✅ "WHERE nom LIKE %s", (saisie,) →  valeur échappée par le driver</pre>
+<p><b>Icônes :</b> 🛡️ boucliers (x3), 💉 seringue barrée (anti-injection), 🔒 cadenas.</p>
+<div class="notes"><b>Notes présentateur (Oumar) :</b> « Les requêtes préparées sont obligatoires dans le sujet : le SQL et les valeurs voyagent séparément, le driver échappe tout — taper du SQL dans un champ de recherche ne produit que du texte. Et si malgré tout une faille existait, le compte bibliothecaire ne peut ni supprimer ni détruire : la base est la dernière ligne de défense. » Transition : « Daouda va vous présenter ce que voit l'utilisateur. »</div>
+</div>
+
+<!-- ================= SLIDE 10 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 10 — Architecture React · <i>Présentée par Daouda CISSE</i></div>
+<p><b>Titre :</b> Une application monopage (SPA), 9 composants</p>
+<p><b>Visuel principal — schéma en miroir (2 colonnes reliées par des flèches) :</b></p>
+<pre>REACT (composants)        FLASK (blueprints)
+adherents/  ◄──────────►  adherents.py
+livres/     ◄──────────►  livres.py
+emprunts/   ◄──────────►  emprunts.py
+retards/    ◄──────────►  emprunts.py (retards)
+amendes/    ◄──────────►  amendes.py
+Dashboard   ◄──────────►  dashboard.py</pre>
+<p><b>Contenu (3 puces) :</b> React Router : 8 pages sans rechargement · axios : instance unique vers l'API · useState/useEffect : données chargées au montage, écran mis à jour automatiquement</p>
+<p><b>Encadré doré :</b> « 1 fonctionnalité = 1 page React = 1 route Flask = des objets SQL ».</p>
+<p><b>Icônes :</b> ⚛️ logo React, 🧭 boussole (router), 🪞 miroir (symétrie).</p>
+<div class="notes"><b>Notes présentateur (Daouda) :</b> « Le navigateur charge une seule page HTML ; React affiche les écrans et la navigation est instantanée. Mes neuf composants sont rangés par module métier, en miroir exact des blueprints d'Oumar : le projet se lit verticalement, fonctionnalité par fonctionnalité. Mes formulaires sont des composants contrôlés : chaque champ est relié à l'état avec useState. »</div>
+</div>
+
+<!-- ================= SLIDE 11 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 11 — Les 6 fonctionnalités à l'écran · <i>Daouda CISSE</i></div>
+<p><b>Titre :</b> L'application en images</p>
+<p><b>Visuel principal — mosaïque de 4 captures d'écran (2×2), légendées :</b></p>
+<ol>
+<li><b>Tableau de bord</b> — les 5 indicateurs temps réel (emprunts actifs, disponibles, retards, amendes, montant FCFA)</li>
+<li><b>Adhérents</b> — recherche par nom + filtre par filière, avatars colorés</li>
+<li><b>Nouvel emprunt avec REFUS du trigger</b> — l'alerte rouge « Adhérent bloqué : amendes impayées » ← la capture la plus importante</li>
+<li><b>Retour en retard</b> — message « Retour enregistré. Amende de X FCFA générée. »</li>
+</ol>
+<p><b>Conseil visuel :</b> entourer d'un cadre doré la capture n°3 (le refus) : c'est la preuve visuelle que toute la chaîne fonctionne. Ajouter une flèche annotée « message écrit dans le trigger MySQL ».</p>
+<p><b>Icônes :</b> 📸 appareil photo discret sur chaque vignette.</p>
+<div class="notes"><b>Notes présentateur (Daouda) :</b> Présenter chaque capture en une phrase. Sur la n°3, ralentir : « ce message d'erreur n'est écrit nulle part dans React ni dans Flask — il vient du trigger MySQL et traverse les trois couches. La règle n'existe qu'une seule fois, dans la base. » Mentionner les pages non montrées (catalogue avec couvertures, rapport des retards avec amende estimée, page amendes avec bouton Payer) — elles seront vues en démo.</div>
+</div>
+
+<!-- ================= SLIDE 12 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 12 — Expérience utilisateur &amp; rapport final · <i>Daouda CISSE</i></div>
+<p><b>Titre :</b> Soigné jusqu'au rapport</p>
+<p><b>Contenu (gauche — UX, 4 puces) :</b> thème vert institutionnel + Bootstrap 5 · confirmations avant suppression/retour · messages de succès et d'erreur contextuels · couvertures de livres et avatars générés automatiquement</p>
+<p><b>Contenu (droite — le rapport, SmartArt « Liste de blocs ») :</b> page de garde · introduction · MCD/MLD · justification des choix techniques · fonctionnalités avec captures · requêtes SQL commentées · difficultés &amp; améliorations</p>
+<p><b>Capture d'écran à insérer :</b> page Livres (catalogue avec couvertures) — la plus visuelle du site.</p>
+<p><b>Icônes :</b> 🎨 palette (design), 📄 document (rapport), ✅ coche (conformité au sujet).</p>
+<div class="notes"><b>Notes présentateur (Daouda) :</b> « Le design reprend le vert institutionnel — le même que ces slides. Côté rapport, j'ai suivi exactement le plan exigé par le sujet ; chaque fonctionnalité y est documentée avec sa capture, et les requêtes importantes sont commentées. » Transition : « passons à la démonstration en direct. »</div>
+</div>
+
+<!-- ================= SLIDE 13 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 13 — Démonstration en direct (3–4 min, à trois)</div>
+<p><b>Titre :</b> Scénario de démonstration</p>
+<p><b>Visuel : SmartArt « Chronologie » à 6 étapes, avec le prénom du présentateur sous chaque étape :</b></p>
+<ol>
+<li><b>Lancement</b> (Oumar) — MySQL ✓, <code>python app.py</code>, <code>npm start</code> → « connexion avec le compte bibliothecaire, pas root »</li>
+<li><b>Adhérents</b> (Daouda) — recherche, filtre filière, ajout d'un adhérent</li>
+<li><b>Emprunt accepté</b> (Daouda) — exemplaire disponible → succès, retour prévu J+14</li>
+<li><b>Emprunts REFUSÉS</b> (Rahmatoulaye) — adhérent avec amende → message du trigger · 4e emprunt → « Maximum 3 emprunts actifs »</li>
+<li><b>Retour en retard</b> (Rahmatoulaye) — amende générée automatiquement → page Amendes → « Payer » → tableau de bord mis à jour</li>
+<li><b>Droits MySQL</b> (Rahmatoulaye) — terminal : <code>mysql -u lecteur</code> → SELECT Livre ✓ · SELECT Adherent ✗ « command denied »</li>
+</ol>
+<p><b>Encadré doré :</b> « Moment fort : les refus en direct — préparer en base un adhérent avec amende impayée et un adhérent à 3 emprunts actifs ».</p>
+<div class="notes"><b>Notes présentateur :</b> Si la démo en direct échoue (réseau, environnement), basculer sur les captures d'écran du rapport — les avoir ouvertes en arrière-plan. Pas de page de connexion web : si le jury la demande, répondre que le contrôle d'accès est au niveau MySQL (Partie 3 LCD) et qu'une authentification web est la première amélioration prévue.</div>
+</div>
+
+<!-- ================= SLIDE 14 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 14 — Difficultés &amp; solutions (porte-parole ou à trois, 1 min)</div>
+<p><b>Titre :</b> Ce qui nous a fait progresser</p>
+<p><b>Visuel : SmartArt « Liste à 2 colonnes » (Difficulté → Solution), 4 lignes :</b></p>
+<table>
+<tr><th>Difficulté</th><th>Solution</th></tr>
+<tr><td>Syntaxe des triggers (DELIMITER, SIGNAL)</td><td>Tests unitaires de chaque règle directement dans MySQL</td></tr>
+<tr><td>Erreurs CORS au branchement React–Flask</td><td>Flask-CORS + compréhension du mécanisme navigateur</td></tr>
+<tr><td>Jeu de données cohérent (5 retards sans bloquer les emprunts actifs)</td><td>Scénario de données écrit sur papier avant insertion</td></tr>
+<tr><td>Logique state → rendu de React</td><td>Adoption systématique de useState/useEffect</td></tr>
+</table>
+<p><b>Icônes :</b> 🧗 escalade (difficulté), 💡 ampoule (solution).</p>
+<div class="notes"><b>Notes présentateur :</b> Une phrase par ligne, sur un ton honnête : « ces difficultés sont normales sur une première architecture 3-tiers ; chacune nous a appris un mécanisme fondamental ».</div>
+</div>
+
+<!-- ================= SLIDE 15 ================= -->
+<div class="slide">
+<div class="slidehead">SLIDE 15 — Conclusion · Remerciements · Questions (porte-parole, 1 min)</div>
+<p><b>Titre :</b> Un système complet, des règles garanties par la base</p>
+<p><b>Contenu (3 cartes horizontales) :</b></p>
+<ul>
+<li>✅ <b>Conforme au sujet</b> — modélisation Merise · base + triggers · LCD · application cliente : les 4 parties couvertes</li>
+<li>🚀 <b>Améliorations</b> — authentification web avec rôles · pagination · statistiques graphiques · rappels par e-mail</li>
+<li>🙏 <b>Merci</b> — « Merci de votre attention. Nous sommes prêts pour vos questions. »</li>
+</ul>
+<p><b>Mise en page :</b> reprendre le fond vert foncé de la slide 1 (effet de boucle visuelle), icône livre dorée centrée, gros « Questions ? » en Playfair Display blanc.</p>
+<div class="notes"><b>Notes présentateur :</b> Conclusion à réciter (voir texte commun plus bas), remerciements au Pr. Diaw et à M. Mbaye, puis ouvrir les questions. Chacun répond sur sa couche ; si une question touche deux couches, commencer par celui qui a la partie la plus concernée.</div>
+</div>
+
+<!-- ============ TEXTES ORAUX ============ -->
+<h2 class="pagebreak">Textes oraux (5 minutes maximum chacun)</h2>
+<p>Chaque texte couvre les 3 slides de l'étudiant (~4 minutes en lecture posée, marge d'1 minute pour pointer les visuels).</p>
+
+<h3>Rahmatoulaye DIOUF — slides 4 à 6</h3>
+<div class="notes">
+<p>« Bonjour. J'ai été responsable de la base de données et de la gestion des droits. <i>[Slide 4]</i> Nous avons modélisé le système avec la méthode Merise. Notre MCD, que vous voyez ici, comporte cinq entités. Le choix le plus important est la distinction entre le livre — l'œuvre, identifiée par son ISBN — et l'exemplaire — la copie physique. C'est l'exemplaire qu'on emprunte et qui a un état : disponible, emprunté ou abîmé. Un emprunt relie un adhérent à un exemplaire, et peut générer au plus une amende. Le MLD en découle par les règles de passage : les clés migrent du côté des cardinalités un-un — l'ISBN dans Exemplaire, l'adhérent et l'exemplaire dans Emprunt, l'emprunt dans Amende avec une contrainte UNIQUE.</p>
+<p><i>[Slide 5]</i> La base biblio_dept contient cinq tables avec toutes les contraintes demandées : clés primaires et étrangères, NOT NULL, UNIQUE sur l'email, CHECK sur les montants, ENUM pour les états, et des choix réfléchis pour les suppressions : CASCADE entre Livre et Exemplaire, RESTRICT sur les emprunts pour protéger l'historique. Mais le cœur de mon travail, ce sont les quatre triggers. Avant chaque emprunt, un trigger vérifie les trois règles du sujet : exemplaire ni abîmé ni déjà emprunté, maximum trois emprunts actifs, aucune amende impayée — et il calcule la date de retour à J plus quatorze. Si une règle est violée, SIGNAL SQLSTATE annule l'opération avec un message métier. Au retour, un autre trigger compare les dates et crée automatiquement l'amende : cent francs par jour de retard. Deux triggers maintiennent l'état de l'exemplaire. Résultat : aucune application ne peut contourner ces règles. Nos données de test respectent le sujet : dix livres, quinze adhérents, vingt exemplaires, quinze emprunts dont cinq en retard — et les cinq amendes ont bien été créées automatiquement.</p>
+<p><i>[Slide 6]</i> J'ai écrit les six requêtes de consultation demandées : elles utilisent les jointures, GROUP BY et HAVING, les sous-requêtes avec IN et NOT EXISTS, et les agrégations avec CASE WHEN pour séparer amendes payées et impayées par filière. Enfin, la gestion des droits : deux utilisateurs créés avec GRANT. Bibliothecaire peut lire, insérer et modifier — jamais supprimer. Lecteur ne peut que consulter le catalogue. Vous voyez sur cette capture que MySQL refuse lui-même un accès interdit : la sécurité ne dépend pas de l'application. Et c'est avec le compte bibliothecaire, pas root, que notre application se connecte : principe du moindre privilège. Je passe la parole à Oumar pour le backend. »</p>
+</div>
+
+<h3>Oumar GAYE — slides 7 à 9</h3>
+<div class="notes">
+<p>« Merci Rahmatoulaye. J'ai développé le backend : le serveur qui relie l'interface à la base. <i>[Slide 7]</i> C'est une API REST écrite en Python avec Flask : elle ne produit aucune page HTML, elle reçoit des requêtes HTTP et répond en JSON. Le code est organisé en modules : app.py est le point d'entrée et active CORS — nécessaire car React tourne sur le port 3000 et Flask sur le 5000 ; config.py contient la connexion MySQL avec le compte bibliothecaire ; database.py centralise tous les accès à la base ; et le dossier routes contient cinq Blueprints, un par domaine métier. Cette organisation nous a permis de travailler à trois sans conflit.</p>
+<p><i>[Slide 8]</i> Au total, seize endpoints couvrent les six fonctionnalités du sujet. Je vous montre le plus parlant : l'emprunt. Quand React envoie POST /api/emprunts, mon code fait un simple INSERT préparé. C'est le trigger de Rahmatoulaye qui vérifie les règles. S'il accepte, je réponds 201. S'il refuse, MySQL me renvoie le message métier — par exemple « Adhérent bloqué : amendes impayées » — je l'intercepte avec un try/except et je le transmets au frontend avec le code 422. Le message écrit dans le trigger s'affichera tel quel à l'écran. Même logique au retour : je mets à jour la date de retour réelle, le trigger calcule l'amende, et je relis la table Amende pour annoncer le montant généré. Le backend ne calcule aucune règle : il transmet la décision de la base.</p>
+<p><i>[Slide 9]</i> Côté sécurité, nous avons trois lignes de défense. Le frontend impose les champs obligatoires. Le backend vérifie les données reçues et — exigence du sujet — n'utilise que des requêtes préparées : le SQL et les valeurs voyagent séparément, le driver échappe tout, l'injection SQL est impossible. Vous voyez la différence à l'écran : à gauche la concaténation dangereuse, à droite notre version avec marqueurs. Et la troisième ligne, la plus solide : MySQL lui-même, avec ses contraintes, ses triggers, et un compte applicatif qui ne peut ni supprimer ni détruire. Daouda va maintenant vous présenter ce que voit l'utilisateur. »</p>
+</div>
+
+<h3>Daouda CISSE — slides 10 à 12</h3>
+<div class="notes">
+<p>« Merci Oumar. J'ai développé l'interface web et rédigé le rapport final. <i>[Slide 10]</i> L'interface est une application monopage construite avec React : le navigateur charge une seule page HTML, et React affiche les huit écrans sans jamais recharger — la navigation est instantanée grâce à React Router. Vous voyez sur ce schéma la symétrie de notre projet : mes neuf composants sont rangés par module métier, en miroir exact des Blueprints d'Oumar. Une fonctionnalité du sujet, c'est une page React, une route Flask et des objets SQL. Les appels à l'API passent par une instance axios configurée une seule fois, et chaque page charge ses données avec useEffect et les stocke avec useState — quand l'état change, React met l'écran à jour automatiquement.</p>
+<p><i>[Slide 11]</i> Voici l'application en images. Le tableau de bord affiche cinq indicateurs en temps réel : emprunts actifs, exemplaires disponibles, retards, amendes et montant impayé. La page adhérents offre la recherche par nom et le filtre par filière demandés par le sujet — et le même formulaire sert à créer et à modifier, grâce au paramètre d'identifiant dans l'URL. La capture la plus importante est celle-ci : un emprunt refusé. Ce message rouge — « Adhérent bloqué : amendes impayées » — n'est écrit nulle part dans mon code ni dans celui d'Oumar : il vient du trigger MySQL et traverse les trois couches. La règle n'existe qu'une seule fois, dans la base. Enfin, le retour d'un livre en retard affiche le montant de l'amende générée automatiquement.</p>
+<p><i>[Slide 12]</i> Côté expérience utilisateur : un thème vert institutionnel avec Bootstrap, des confirmations avant chaque action sensible, des messages contextuels, et des détails soignés comme les couvertures de livres et les avatars des adhérents. J'ai aussi rédigé le rapport final selon le plan exigé : introduction, MCD et MLD complets, justification des choix techniques, chaque fonctionnalité documentée avec sa capture, les requêtes SQL commentées, et une conclusion avec nos difficultés et nos pistes d'amélioration — en premier lieu une authentification web avec des rôles, qui prolongerait la gestion des droits MySQL jusqu'à l'interface. Passons maintenant à la démonstration. »</p>
+</div>
+
+<h3>Conclusion commune (porte-parole, 1 minute — slide 15)</h3>
+<div class="notes">
+<p>« Pour conclure, ce projet nous a permis de construire un système d'information complet, de la modélisation Merise jusqu'à l'interface web. Notre base ne se contente pas de stocker : grâce aux triggers, elle applique elle-même les règles de la bibliothèque — trois emprunts maximum, blocage des adhérents ayant des amendes impayées, amende automatique de cent francs par jour de retard. L'API n'utilise que des requêtes préparées avec un compte aux privilèges limités, et l'interface couvre les six fonctionnalités demandées. Ce projet nous a surtout appris à travailler en équipe sur trois couches qui doivent communiquer. Nous remercions le Professeur Diaw et Monsieur Mbaye, et nous sommes prêts à répondre à vos questions. »</p>
+</div>
+
+<!-- ============ QUESTIONS PROBABLES ============ -->
+<h2 class="pagebreak">Questions probables du professeur (avec réponses)</h2>
+
+<h3>Pour Rahmatoulaye (base de données)</h3>
+<div class="qr"><p class="q">1. Différence MCD / MLD ?</p><p>R : Le MCD décrit entités, attributs et associations avec cardinalités, indépendamment de la technologie. Le MLD le traduit en tables relationnelles : les associations deviennent des clés étrangères selon les cardinalités.</p></div>
+<div class="qr"><p class="q">2. Pourquoi séparer Livre et Exemplaire ?</p><p>R : Le livre est l'œuvre (ISBN), l'exemplaire la copie physique avec un état. C'est l'exemplaire qu'on emprunte ; sans cette séparation, impossible de suivre chaque copie.</p></div>
+<div class="qr"><p class="q">3. BEFORE ou AFTER : comment choisir ?</p><p>R : BEFORE peut modifier la ligne (date J+14) ou bloquer (SIGNAL) ; AFTER déclenche des actions dérivées une fois l'écriture faite (changer l'état de l'exemplaire).</p></div>
+<div class="qr"><p class="q">4. Que fait SIGNAL SQLSTATE '45000' ?</p><p>R : Lève une erreur volontaire définie par l'utilisateur : l'opération est annulée et MESSAGE_TEXT porte le message métier qui remonte jusqu'à l'application.</p></div>
+<div class="qr"><p class="q">5. Pourquoi UNIQUE sur id_emprunt dans Amende ?</p><p>R : Un emprunt génère au plus une amende ; l'UNIQUE l'impose physiquement.</p></div>
+<div class="qr"><p class="q">6. CASCADE vs RESTRICT : justifiez.</p><p>R : Supprimer un livre supprime ses exemplaires (CASCADE, ils n'ont plus de sens seuls) ; supprimer un adhérent avec des emprunts est interdit (RESTRICT, protection de l'historique).</p></div>
+<div class="qr"><p class="q">7. WHERE vs HAVING ?</p><p>R : WHERE filtre les lignes avant regroupement ; HAVING filtre les groupes après GROUP BY, donc peut porter sur des agrégats (notre requête 2).</p></div>
+<div class="qr"><p class="q">8. À quoi sert une vue ?</p><p>R : Requête enregistrée, recalculée à chaque consultation : simplifie le code applicatif et reste toujours à jour (ex : vue_emprunts_actifs avec DATEDIFF pour les jours de retard).</p></div>
+
+<h3>Pour Oumar (backend)</h3>
+<div class="qr"><p class="q">9. Qu'est-ce qu'une requête préparée ?</p><p>R : SQL et valeurs envoyés séparément ; le driver échappe les valeurs : une saisie malveillante est traitée comme du texte, jamais comme du code SQL.</p></div>
+<div class="qr"><p class="q">10. C'est quoi CORS ?</p><p>R : Le navigateur bloque par défaut les appels entre origines différentes (port 3000 → port 5000). Flask-CORS ajoute les en-têtes qui autorisent explicitement notre frontend.</p></div>
+<div class="qr"><p class="q">11. Qu'est-ce qu'un Blueprint ?</p><p>R : Un module de routes enregistré dans l'application principale ; un par domaine métier chez nous.</p></div>
+<div class="qr"><p class="q">12. Pourquoi ne pas vérifier la règle des 3 emprunts en Python ?</p><p>R : Elle est dans le trigger, donc appliquée même en accédant à la base sans notre API ; la dupliquer créerait un risque d'incohérence.</p></div>
+<div class="qr"><p class="q">13. Que se passe-t-il si on supprime un adhérent depuis l'application ?</p><p>R : Le compte bibliothecaire n'a pas le privilège DELETE : MySQL refuse et l'API renvoie l'erreur 422. La suppression nécessiterait un compte administrateur — c'est le moindre privilège en action.</p></div>
+<div class="qr"><p class="q">14. Pourquoi Flask plutôt que Django ?</p><p>R : Flask est minimaliste : idéal pour une API pédagogique où nous voulions écrire le SQL nous-mêmes — l'objectif du module — plutôt qu'utiliser l'ORM imposé de Django.</p></div>
+
+<h3>Pour Daouda (frontend)</h3>
+<div class="qr"><p class="q">15. Qu'est-ce qu'une SPA ?</p><p>R : Une seule page HTML chargée ; ensuite JavaScript change le contenu selon l'URL (React Router) : navigation sans rechargement.</p></div>
+<div class="qr"><p class="q">16. useState et useEffect ?</p><p>R : useState déclare un état dont la modification redessine le composant ; useEffect exécute du code au montage — chez nous, le chargement des données depuis l'API.</p></div>
+<div class="qr"><p class="q">17. Link vs balise &lt;a&gt; ?</p><p>R : &lt;a&gt; recharge toute la page ; Link change uniquement le composant affiché.</p></div>
+<div class="qr"><p class="q">18. Comment s'affiche le message « Maximum 3 emprunts actifs » ?</p><p>R : Trigger → exception MySQL → Flask la renvoie en JSON code 422 → axios .catch() → alerte Bootstrap. Le message traverse les trois couches sans être réécrit.</p></div>
+<div class="qr"><p class="q">19. Votre application a-t-elle une authentification ?</p><p>R : Non — non demandée : la Partie 3 porte sur les comptes MySQL. L'application incarne le bibliothécaire. Une authentification web avec rôles est notre première amélioration prévue.</p></div>
+<div class="qr"><p class="q">20. Comment les listes se rafraîchissent-elles après une action ?</p><p>R : Après un succès, on rappelle l'API et on met à jour le state ; React redessine automatiquement.</p></div>
+
+<!-- ============ CHECKLIST ============ -->
+<h2>Checklist finale de soutenance</h2>
+<table>
+<tr><th>✓</th><th>Vérification</th></tr>
+<tr><td>☐</td><td>La veille : recharger la base (source biblio_dept.sql), lancer MySQL + Flask + React, dérouler la démo complète une fois.</td></tr>
+<tr><td>☐</td><td>Préparer en base : 1 adhérent avec amende impayée + 1 adhérent avec 3 emprunts actifs (pour les refus en direct).</td></tr>
+<tr><td>☐</td><td>Terminal prêt : <code>mysql -u bibliothecaire -p</code> et <code>mysql -u lecteur -p</code> (mots de passe connus par Rahmatoulaye).</td></tr>
+<tr><td>☐</td><td>Captures d'écran de secours ouvertes en arrière-plan (si la démo en direct échoue).</td></tr>
+<tr><td>☐</td><td>Insérer les vraies captures dans les slides 6, 11 et 12 + MCD.png dans la slide 4.</td></tr>
+<tr><td>☐</td><td>Chronométrer chaque passage : 5 min maximum par personne, démo comprise.</td></tr>
+<tr><td>☐</td><td>Chacun relit son texte oral à voix haute 2 fois et connaît ses questions/réponses.</td></tr>
+<tr><td>☐</td><td>Savoir répondre : « pas de page de connexion web : contrôle d'accès au niveau MySQL (LCD) ; authentification web = amélioration prévue ».</td></tr>
+<tr><td>☐</td><td>Mode présentateur PowerPoint activé (notes visibles par vous, pas par le jury) ; transitions sobres (fondu uniquement).</td></tr>
+<tr><td>☐</td><td>Plan B matériel : présentation exportée en PDF sur une clé USB.</td></tr>
+</table>
+
+</body>
+</html>

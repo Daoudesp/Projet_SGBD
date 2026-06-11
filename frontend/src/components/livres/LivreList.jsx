@@ -4,10 +4,12 @@ import api from '../../api/axios';
 /* ─── Mapping titre → image de couverture ─── */
 const getImage = (titre = '') => {
   const t = titre.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  if (t.includes('django'))
+    return '/images/Django.png';
   if (t.includes('donnee') || t.includes('donnees') || t.includes('base'))
     return '/images/Base_de_donnee.jpg';
-  if (t.includes('logiciel') || t.includes('genie'))
-    return '/images/genie_logiciel.jpg';
+  if (t.includes('java script'))
+    return '/images/JavaScript.jpg';   
   if (t.includes('algorithme'))
     return '/images/Algorithme.jpg';
   if (t.includes('reseau'))
