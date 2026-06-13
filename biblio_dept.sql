@@ -562,7 +562,3 @@ GRANT SELECT
     ON biblio_dept.Exemplaire
     TO 'lecteur'@'localhost';
 
--- ------------------------------------------------
--- Rechargement des privilèges
--- ------------------------------------------------
-FLUSH PRIVILEGES;
